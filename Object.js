@@ -128,3 +128,116 @@ var bicyle3 = new Bicyle(510, 120, 43); // constructors mode
 
 console.log(bicyle3)
 Bicyle {cadence: 510, speed: 120, gear: 43}
+
+
+------------------------------------------------the different ways you can call a function in JavaScript. There are four different ways!--
+
+
+function foo() {
+	console.log("Hello");
+}
+
+foo(); // Method #1
+
+
+var obj = {};
+
+obj.foo = function foo() {
+	console.log("Hello");
+};
+
+obj.foo(); //  Method #2
+
+new foo(); //  Method #3
+
+           // Method #4
+
+===================There are two default arguments to every funtion call i) arguments ii) this ===================================
+
+-------------------------------------------------------------------------------
+Global object itself depends on the runtime environmnent you're using 
+1) If you're running JavaScript on browser the global object is a window object, which represents the window or tab i.e. actually
+	running the JavaScript code.
+2) If you're running it in node.js there is an object called global, which is the global object.	
+-------------------------------------------------------------------------------
+
+____________________________________________________Refer to Global  Object__________________________
+function foo() {
+	console.log("Hello");
+	console.log(this); // this refer global object i.e. window
+}
+
+foo(); // Method #1
+//window in chrome
+// global in nodejs
+
+____________________________________________Calling a function in the context of an object  this refer to that object whose property you're calling _______________________
+var obj = {};
+
+obj.foo = function foo() {
+	console.log("Hello");
+	console.log(this); //this refer instance of Obj
+};
+
+obj.foo(); //  Method #2 i.e. I'm calling in the context
+
+
+
+
+VM5706:5 Hello
+VM5706:6 {foo: ƒ}foo: ƒ foo()__proto__: Object
+undefined
+
+var obj = {"props": "This is the object itself"};
+
+obj.foo = function foo() {
+	console.log("Hello");
+	console.log(this); //instance of Obj
+};
+
+obj.foo(); //  Method #2
+
+
+O/p:
+
+Hello
+{props: "This is the object itself", foo: ƒ}
+
+___________________When you're calling using a new keyword that this refer to the newly created object ________________________________________________
+
+function foo() {
+	//var this = {};
+	console.log("Hello");
+	console.log(this);
+	// return this;
+}
+
+
+new foo(); //  Method #3, I.e. When I'm calling using new Keyword then in function two line implicitly added in beginning i.e. var this = {} and end of the code return this;
+
+O/p: 
+Hello
+foo {}
+
+
+---------------------------------------------------------------------------------
+
+
+
+function Bicyle(cadence, speed, gear, tirePressure) {
+	this.cadence = cadence;
+	this.speed = speed;
+	this.gear = gear;
+	this.tirePressure = tirePressure;
+	this.inflateTires = function() {
+		this.tirePressure += 3;
+	}
+}
+
+//Calling the function in contructor mode
+var bicyle4 = new Bicyle(50, 20, 4, 25);
+bicyle4.inflateTires();
+
+var bicyle5 = new Bicyle(50, 20, 4, 30);
+bicyle5.inflateTires();
+
