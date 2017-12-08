@@ -114,7 +114,7 @@ function creatBicyle(cadence, speed, gear) {
 	return newBicyle;
 }
 
-function bicyleConstructor(cadence, speed, gear) {
+function Bicyle(cadence, speed, gear) {
 // 	var this = {};
 	this.cadence = cadence;
 	this.speed = speed;
@@ -124,7 +124,7 @@ function bicyleConstructor(cadence, speed, gear) {
 }
 
 var bicyle1 = creatBicyle(50, 20, 4); //regular functions
-var bicyle3 = new bicyleConstructor(510, 120, 43); // constructors mode
+var bicyle3 = new Bicyle(510, 120, 43); // constructors mode
 
 console.log(bicyle3)
-bicyleConstructor {cadence: 510, speed: 120, gear: 43}
+Bicyle {cadence: 510, speed: 120, gear: 43}
