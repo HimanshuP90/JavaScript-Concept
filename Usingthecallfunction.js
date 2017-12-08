@@ -56,3 +56,69 @@ bicyle2
 Bicyle {cadence: 50, speed: 20, gear: 4, tirePressure: 33, inflateTires: ƒ}
 
 
+----------------------------------------Introduction of prototype---------------------
+When create function then two object created for every function 
+1) function name
+1) Object prototype
+
+But when u call usifg new keyword like i.e. new foo(), then also create new __proto__
+
+
+
+function foo() {}
+undefined
+
+foo.prototype
+Object { … }
+
+var newFooObj = new foo();
+undefined
+
+newFooObj
+Object {  }
+
+foo.prototype.test = "This is the prototype object of foo";
+"This is the prototype object of foo"
+
+foo.prototype.test
+"This is the prototype object of foo"
+
+newFooObj.__proto__.test
+"This is the prototype object of foo"
+
+foo.prototype === newFooObj.__proto__
+true
+
+
+----------Play Pranks with prototype-----------
+
+function Employee(name) {
+ this.name = name;
+}
+
+var emp1 = new Employee("Jim");
+emp1
+Object { name: "Jim" }
+
+var emp2 = new Employee("Pam");
+emp2
+Object { name: "Pam" }
+
+Employee.prototype
+Object { … }
+
+Employee.prototype.playPranks =  function() { console.log("Prank played !");};
+
+function Employee.prototype.playPranks();
+
+Employee.prototype.playPranks()
+Prank played ! debugger eval code:1:47
+undefined
+
+emp1.playPranks()
+Prank played ! debugger eval code:1:47
+undefined
+
+emp2.playPranks()
+Prank played ! debugger eval code:1:47
+undefined
