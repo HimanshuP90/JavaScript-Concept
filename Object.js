@@ -152,7 +152,7 @@ new foo(); //  Method #3
 
            // Method #4
 
-===================There are two default arguments to every funtion call i) arguments ii) this ===================================
+===================There are two default arguments to every function call i) arguments ii) this ===================================
 
 -------------------------------------------------------------------------------
 Global object itself depends on the runtime environmnent you're using 
