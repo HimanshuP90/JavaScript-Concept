@@ -125,7 +125,10 @@ How to speed up your JavaScript code.
 6) 	Cache objects to increase performance
 7) 	Use a .js file to cache scripts
 8) 	Place JavaScript at the bottom of the page
-9)	
+9)	Use jQuery as a framework
+10) Implement Event Delegation
+11) 
+
 
 ---------------------------------------------------------------------------------
 
