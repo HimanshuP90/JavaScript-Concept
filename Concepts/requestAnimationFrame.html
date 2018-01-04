@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+	<style type="text/css">
+			
+		body {
+			background-color: #FFF;
+			margin: 30px;
+			margin-top: 10px;
+		}
+
+		#contentContainer {
+			width: 550px;
+			height: 350px;
+			border: 5px black solid;
+			overflow: hidden;
+			background-color: #FFFFF00;
+		}
+
+		#thing {
+			position: relative;
+			left: 50px;
+			top: 25px;
+		}
+	</style>
+<body>
+<!-- //requestAnimationFrame : Function that gets called 
+	repeatedly as part of drawing thins to the screen. -->
+	<div id="contentContainer">
+		<img  id="thing" src="./Circle.png" height="300" width="300">
+	</div>
+</body>
+
+<script>
+
+	var theThing = document.querySelector("#thing");
+	var currentPos = 0;
+	var requestAnimationFrame = window.requestAnimationFrame ||
+								window.mozrequestAnimationFrame ||
+								window.webkitrequestAnimationFrame ||
+								window.msrequestAnimationFrame;
+
+	function moveThing() {
+		
+		currentPos += 5;
+
+		// translate or translate3d
+		theThing.style.left =  currentPos + "px";
+
+		if (Math.abs(currentPos) >= 900) {
+			currentPos = -500;
+		}
+
+		requestAnimationFrame(moveThing);
+	}
+
+	moveThing();
+
+
+</script>
+</html>

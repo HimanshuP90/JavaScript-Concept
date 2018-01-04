@@ -41,7 +41,9 @@
 
 	<hr/>
 
-	<h4>requestAnimationFrame: Request a repaint operation and runs code as part of the repaint.</h4>
+	<h4>requestAnimationFrame: Request a repaint operation and runs code as part of the repaint.
+	<em>i.e. Running the loop continuously:</em>
+	</h4>
 	<!-- Setting it up: -->
 	var timerID = requestAnimationFrame(someFunction);
 	<br>
@@ -61,7 +63,14 @@
 	// var timerID = window.setInterval(drawText, 3000);
 	// window.clearInterval(timerID);
 
+	// requestAnimationFrame(drawText);
 
+	// function animationLoop() {
+	// 	drawText();
+	// 	requestAnimationFrame(animationLoop);
+	// }
+
+	// animationLoop();
 </script>
 </body>
 </html>
