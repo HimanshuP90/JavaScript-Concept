@@ -1,0 +1,23 @@
+<!-- Listening for events 
+
+source.addEventListener(eventName, eventHandler, true); -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Events</title>
+</head>
+<body>
+
+	<script>
+		
+		document.addEventListener("click", changeColor, true);
+
+		function changeColor(e) {
+			document.writeln(e.type);
+			document.body.style.backgroundColor = "#FFC926";
+		}
+
+	</script>
+</body>
+</html>
