@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<style>
+	div {
+		background-color: lightblue;
+		font-family: monospace;
+		padding: 15px;
+	}
+
+	p {
+		color: blue;
+		font-weight: bold;
+		font-size: 40px;
+	}
+	h4 {
+		font-family: sans-serif;
+	}
+
+</style>
+<body>	
+<p></p>
+<div>
+	<h4>setTimeout: Runs code after a specified period of time.</h4>
+	<!-- Setting it up: -->
+	var timerID =  window.setTimeout(someFunction, delayInMilliseconds);
+	<br>
+	<!-- Cancelling it  -->
+	window.clearTimeout(timerID);
+	
+	<hr/>
+	
+	<h4>setInterval: Runs code repeatedly with a specified delay between each repeat.</h4>
+	<!-- Setting it up: -->
+	var timerID =  window.setInterval(someFunction, delayInMilliseconds);
+	<br>
+	<!-- Cancelling it  -->
+	window.clearTimeout(timerID);
+
+	<hr/>
+
+	<h4>requestAnimationFrame: Request a repaint operation and runs code as part of the repaint.
+	<em>i.e. Running the loop continuously:</em>
+	</h4>
+	<!-- Setting it up: -->
+	var timerID = requestAnimationFrame(someFunction);
+	<br>
+	<!-- Cancelling it  -->
+	cancelAnimationFrame(timerID);
+
+</div>
+<script>
+	
+	function drawText(argument) {
+		document.querySelector("p").textContent += "#\n";
+	}
+
+	// var timerID =  window.setTimeout(drawText, 5000);
+	// window.clearTimeout(timerID);
+
+	// var timerID = window.setInterval(drawText, 3000);
+	// window.clearInterval(timerID);
+
+	// requestAnimationFrame(drawText);
+
+	// function animationLoop() {
+	// 	drawText();
+	// 	requestAnimationFrame(animationLoop);
+	// }
+
+	// animationLoop();
+</script>
+</body>
+</html>
