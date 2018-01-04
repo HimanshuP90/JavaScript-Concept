@@ -1,0 +1,39 @@
+1) Events don't start at the thing you trigger the event on.
+2) Events start at the Root.
+	& events goes down(Event Capturing Phase)
+	i.e. The part where you initiate the event and the event barrels down the DOM from the root is known as the Event Capturing Phase:
+
+	i.e window 
+		 --document
+		 	--html
+		 		--body
+		 		  -- one_a
+		 	--one_a	  	-- one_b
+		 	  --two
+
+  & evenst goes up( Event Bubbling Phase)
+
+3) One of the main things to note is that it doesn't matter where in your DOM you initiate an event. The event always starts at the root, goes down until it hits the target, and then goes back up to the root.
+
+
+<!-- Listening for events 
+
+source.addEventListener(eventName, eventHandler, true); 
+
+example:
+
+clickButton.addEventListener("click", showAlert, true);
+
+A true value means capture.
+A false value means bubble.
+-->
+
+
+// To interupt an event and permanently derail it from its path, you have the stopPropagation method
+e.stopPropagation();
+
+i.e.  
+function handleClick(e) {
+	e.stopPropagation();
+	//do something	
+}
