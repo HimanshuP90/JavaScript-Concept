@@ -10,9 +10,28 @@ A false value means bubble.
 <html>
 <head>
 	<title>Events</title>
-	<script src="./closures.js"></script>
+	<script src="./strings.js"></script>
+<!-- 	<style type="text/css">
+		.dissableMenu {
+			display: none;
+		}
+	</style> -->
 </head>
 <body>
+	<div id="main">
+		<h1>Adding and Removing Class Values</h1>
+	</div>
+
+	<ul id="dropDown">
+		<li>One</li>
+		<li>Two</li>
+		<li>Three</li>
+		<li>Four</li>
+		<li>Five</li>
+		<li>Six</li>
+		<li>Seven</li>
+		<li>Eight</li>
+	</ul>
 
 	<script>
 		
@@ -23,6 +42,13 @@ A false value means bubble.
 			document.body.style.backgroundColor = "#FFC926";
 		}
 
+		var theDropDown = document.getElementById("dropDown");
+		console.log(theDropDown)
+		theDropDown.classList.add("dissableMenu");
+		theDropDown.style.display = 'none';
+
+		theDropDown.classList.remove("dissableMenu");
+		theDropDown.style.display = 'inline';
 	</script>
 </body>
 </html>
