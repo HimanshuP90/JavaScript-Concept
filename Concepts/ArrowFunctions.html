@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arro Functions</title>
+	<style type="text/css">
+		body {
+			background-color: rgb(215, 220, 221);
+			margin: 100px;
+			font-size: 34px;
+		}
+	</style>
+</head>
+<body>
+	<p id="count">!!!</p>
+	<h4>Hello</h4>
+	<script type="text/javascript">
+		
+		// var foo = function(name) {
+		// 	document.writeln("Hello, " + name + "!!!");
+		// }
+		// // foo("Himanshu Pandey");
+
+		// var bar = (name) => document.writeln("Hello, " + name + "!!!");
+		// // bar("Himanshu Pandey");
+
+		// var zorb = () => {
+		// 	document.writeln("Isn't this cool?");
+
+		// }
+		// // zorb();
+
+		// var gameObject = {
+		// 	level: 4,
+		// 	score: 1200,
+		// 	time: 200,
+		// 	counDown: function() {
+		// 		var that = this;
+		// 		window.setInterval(function(){
+		// 			that.time--;
+		// 			document.querySelector("#count").innerText = that.time;
+		// 		}, 1000);
+		// 	}
+		// }
+
+		// var myGame = Object.create(gameObject);
+		// myGame.counDown();
+
+		// var gameObject = {
+		// 	level: 4,
+		// 	score: 1200,
+		// 	time: 200,
+		// 	counDown: function() {
+		// 		window.setInterval(() => {
+		// 			this.time--;
+		// 			document.querySelector("#count").innerText = this.time;
+		// 		}, 1000);
+		// 	}
+		// }
+
+		// var myGame = Object.create(gameObject);
+		// myGame.counDown();
+
+		document.addEventListener("click", handleStart);
+		function handleStart(e) {
+			var myTag = document.querySelector('h4');
+			console.log(myTag);
+		}
+	</script>
+</body>
+</html>

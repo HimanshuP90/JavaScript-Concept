@@ -74,3 +74,31 @@ console.log(theDropDown)
 theDropDown.classList.add("dissableMenu");
 
 })();
+
+
+
+//Once a variable has been declared with const
+you can't reassigned it
+Also you can't redeclare it;
+
+
+/*
+const keyword
+You can assign an object as the value, but
+the object properties can be changed
+
+const SPEC = {
+	"speed": "1234";
+	"gear": "top";
+}
+
+SPEC.speed = "10000";
+
+
+let keyword: block scope local vairable
+
+
+Arrow functions 
+
+
+*/
