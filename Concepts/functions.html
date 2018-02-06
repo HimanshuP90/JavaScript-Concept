@@ -2,18 +2,37 @@
 <html>
 <head>
 	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 <body>
-	<script>
+	<p>Enter an email address:</p>
+	<input id="email" />
+	<button type="submit" id="validate">Validate!</button>
+	<h2 id="result"></h2>
+	<script>	 
+	 // document.writeln("ABC");
+	 // if (true) {
+	 // 	document.writeln("Hello!");
+	 // }
+	 // document.writeln("XYZ");
 	 
-	 document.writeln("ABC");
-
-	 if (true) {
-	 	document.writeln("Hello!");
+	 function validationforEmail(email) {
+ 		var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+ 		return re.test(email);
 	 }
 
-	 document.writeln("XYZ");
-
+	 function validateEmail(){
+	 	$("#result").text("");
+	 	var email = $("#email").val();
+	 	if (validationforEmail(email)) {
+	 		$("#result").text(email + " is valid ");
+	 		$("#result").css ("color","green");
+	 	} else {
+	 		$("#result").text(email + " is not valid");
+	 		$("#result").css ("color","red");	
+	 	}
+	 }
+	 $("#validate").bind("click", validateEmail);
 	</script>
 </body>
 </html>
