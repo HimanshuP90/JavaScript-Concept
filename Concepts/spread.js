@@ -19,4 +19,6 @@ By inserting the mid array into the arr array, we’ve ended up with an array wi
 var mid = [3, 4];
 var arr = [1, 2, ...mid, 5, 6];
 
-console.log(arr); // [1,2,3,4,5,6]
+console.log(arr); // [1,2,3,4,5,6
+
+]
