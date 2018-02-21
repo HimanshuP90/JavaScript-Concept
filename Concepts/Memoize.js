@@ -1,5 +1,14 @@
 /*How to use Memoize to cache JavaScript function results and speed up your code
 
+When to memoize your functions
+Although it might look like memoization can be used with all functions, it actually has limited use cases:
+
+In order to memoize a function, it should be pure so that return values are the same for same inputs every time
+Memoizing is a trade-off between added space and added speed and thus only significant for functions having a limited input range so that cached values can be made use of more frequently
+It might look like you should memoize your API calls however it isn’t necessary because the browser automatically caches them for you. See HTTP caching for more detail
+The best use case I found for memoized functions is for heavy computational functions which can significantly improve performance (factorial and fibonacci are not really good real world examples)
+If you’re into React/Redux you can check out reselect which uses a memoized selector to ensure that calculations only happen when a change happens in a related part of the state tree.
+
 link: How to use Memoize to cache JavaScript function results and speed up your code */
 
 // a simple function to add something
