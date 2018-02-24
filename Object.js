@@ -241,3 +241,16 @@ bicyle4.inflateTires();
 var bicyle5 = new Bicyle(50, 20, 4, 30);
 bicyle5.inflateTires();
 
+
+
+var jane = {
+	name: 'Jane',
+	sayHelloTo: function (otherName) {
+		console.log(this.name+ '' + otherName);
+	}
+}
+
+
+jane.sayHelloTo('Tarzan');
+
+jane.sayHelloTo.call(jane, 'Tarzan');
