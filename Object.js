@@ -254,3 +254,5 @@ var jane = {
 jane.sayHelloTo('Tarzan');
 
 jane.sayHelloTo.call(jane, 'Tarzan');
+
+https://stackoverflow.com/questions/15455009/javascript-call-apply-vs-bind
