@@ -10,6 +10,7 @@ example:
 	}
 
 	foo();
+	
 
 When a function is called without an owner object, the value of this becomes the global object.
 example:
