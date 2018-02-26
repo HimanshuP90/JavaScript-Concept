@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Prototype</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+	function Emplyoee(name){
+		this.name = name;
+	}
+
+	Emplyoee.prototype.getName = function(){
+		return this.name
+	}
+
+	var e1 = new Emplyoee('Himanshu');
+	console.log(e1.getName());
+
+	</script>
+</body>
+</html>
