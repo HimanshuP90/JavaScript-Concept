@@ -4,19 +4,39 @@
 	<title>Prototype</title>
 </head>
 <body>
-	<script type="text/javascript">
+<!-- 	<script type="text/javascript">
 		
-	function Emplyoee(name){
-		this.name = name;
+
+		Emplyoee.prototype.getName = function(){
+			return this.name.toUpperCase();
+		}
+
+		var e1 = new Emplyoee('John')
+		console.log(e1.getName());
+
+		function Emplyoee(name){
+			this.name = name;
+		}
+
+		Emplyoee.prototype.getName = function(){
+			return this.name
+		}
+	</script> -->
+
+<script type="text/javascript">
+	
+
+const dog = {
+	name : 'Fido',
+	breed : 'Collie',
+	bark : function(){
+		console.log('Woof!');
 	}
+};
 
-	Emplyoee.prototype.getName = function(){
-		return this.name
-	}
+console.log(dog);
 
-	var e1 = new Emplyoee('Himanshu');
-	console.log(e1.getName());
 
-	</script>
+</script>
 </body>
 </html>

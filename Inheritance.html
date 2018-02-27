@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Inheritance in JS</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+
+	function Employee(name) {
+		this.name = name;
+	}
+
+	Employee.prototype.getName = function(){
+		return this.name;
+	}
+
+	Employee.prototype.getLength = function(){
+		return this.name.length
+	}
+
+	function PermanentEmployee(annualSalary){
+		this.annualSalary = annualSalary;
+	}
+
+	var employee = new Employee('John');
+	PermanentEmployee.prototype = employee;
+
+	var prmt = new PermanentEmployee(500000)
+	document.writeln(employee.getName());
+	
+	console.log(prmt.hasOwnProperty('annualSalary'))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>
